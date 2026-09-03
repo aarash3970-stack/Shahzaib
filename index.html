@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shahzaib — Professional Video Editor with 10+ years of experience in cinematic editing, color grading, motion graphics and promotional marketing.">
+  <meta name="theme-color" content="#0B0B0B">
+  <title>Shahzaib | Professional Video Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <div class="profile-ring"><img id="introPhoto" src="assets/profile.jpg" alt="Shahzaib"></div>
+      <h1>Shahzaib</h1>
+      <p>Professional Video Editor</p>
+    </div>
+  </div>
+
+  <div class="bg-orb orb-one"></div><div class="bg-orb orb-two"></div>
+  <header class="nav">
+    <a class="logo" href="#home">S<span>.</span></a>
+    <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">10+ YEARS • CREATIVE VIDEO PRODUCTION</div>
+        <h1>Turning <span>Stories</span><br>Into Cinematic Experiences.</h1>
+        <p class="hero-sub">Professional Video Editor</p>
+        <p class="hero-meta">Cinematic Editing • Color Grading • Motion Graphics</p>
+        <p class="hero-meta">Video Editing • Property Promotions • Brand Marketing • Influencer Collaborations</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Hire Me</a>
+          <a class="btn btn-glass" href="#portfolio">View Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="video-card">
+          <div class="fake-video">
+            <div class="play-ring">▶</div>
+            <span>CINEMATIC REEL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section split">
+      <div class="section-heading reveal"><span>01 / ABOUT</span><h2>Experience that makes every frame matter.</h2></div>
+      <div class="about-copy reveal">
+        <p>I’m Shahzaib, a professional video editor with more than 10 years of experience creating cinematic, engaging and conversion-focused content for creators, brands and businesses.</p>
+        <div class="skill-grid">
+          <span>Adobe Premiere Pro</span><span>Adobe Photoshop</span><span>Adobe After Effects</span><span>Adobe Audition</span>
+          <span>AI Video Animation</span><span>AI Thumbnail Design</span><span>Manual Thumbnail Design</span><span>Color Grading</span>
+          <span>Cinematic Editing</span><span>Motion Graphics</span><span>Audio Noise Removal</span><span>Sound Design</span>
+          <span>Storytelling</span><span>Thumbnail Creation</span><span>Professional YouTube Editing</span><span>High Quality Branding</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grading">
+      <div class="section-heading reveal"><span>02 / COLOR</span><h2>Before & After</h2><p>Drag the handle to compare the original and cinematic grade.</p></div>
+      <div class="compare reveal">
+        <div class="compare-after"></div>
+        <div class="compare-before"></div>
+        <div class="compare-label before-label">BEFORE</div><div class="compare-label after-label">AFTER</div>
+        <input id="compareRange" type="range" min="0" max="100" value="50" aria-label="Before after comparison">
+        <div class="compare-handle"></div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-heading reveal"><span>03 / SERVICES</span><h2>Built for attention. Designed for results.</h2></div>
+      <div id="servicesGrid" class="card-grid"></div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="section-heading reveal"><span>04 / SHOWREEL</span><h2>Selected work</h2></div>
+      <div id="portfolioGrid" class="portfolio-grid"></div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="section-heading reveal"><span>05 / PRICING</span><h2>Simple packages. Premium output.</h2></div>
+      <div id="pricingGrid" class="pricing-grid"></div>
+    </section>
+
+    <section id="testimonials" class="section">
+      <div class="section-heading reveal"><span>06 / TESTIMONIALS</span><h2>What clients say</h2></div>
+      <div class="testimonial-grid">
+        <article class="testimonial reveal"><div class="stars">★★★★★</div><p>“Add your best client review here. The animated card is ready for your real testimonial.”</p><strong>Client Name</strong><small>Brand / Creator</small></article>
+        <article class="testimonial reveal"><div class="stars">★★★★★</div><p>“Replace this text with a verified client testimonial that highlights quality, communication and results.”</p><strong>Client Name</strong><small>Business Owner</small></article>
+        <article class="testimonial reveal"><div class="stars">★★★★★</div><p>“Your portfolio deserves social proof. Add real reviews here to build trust with new clients.”</p><strong>Client Name</strong><small>Content Creator</small></article>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="section-heading reveal"><span>07 / FAQ</span><h2>Frequently asked questions</h2></div>
+      <div class="faq">
+        <details><summary>How long does a video take?</summary><p>Delivery depends on video length, complexity and package. The listed packages show typical delivery windows.</p></details>
+        <details><summary>Do you offer revisions?</summary><p>Yes. Revisions are included according to your selected package, with custom workflows available for larger projects.</p></details>
+        <details><summary>Can you promote my business or property?</summary><p>Yes. We offer complete promotional services, including professional property advertisement videos, female presenters for real estate marketing, influencer collaborations, YouTube vlog promotions, Facebook promotions, Instagram Reels, TikTok campaigns, and customized brand marketing solutions.</p></details>
+        <details><summary>Can I request a custom package?</summary><p>Absolutely. Contact me for a tailored editing or promotional package based on your content volume and goals.</p></details>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-heading reveal"><span>08 / CONTACT</span><h2>Let’s create something unforgettable.</h2></div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="promo-text">Need More Than Video Editing? We also provide complete promotional solutions.<br><br>
+          ✔ Professional Female Models for Property Advertisements<br>✔ Brand & Product Promotions<br>✔ Real Estate Marketing Campaigns<br>✔ Social Media Influencer Marketing<br>✔ YouTube Vlog Promotions<br>✔ Facebook Page Promotions<br>✔ Instagram & TikTok Promotions<br>✔ Million-View Promotional Campaigns<br><br>
+          Whether you want to promote a property, business, brand, restaurant, housing society, or any product, we can help connect your promotion with high-performing content creators and deliver premium promotional videos. Contact us today for a custom marketing package.</p>
+          <div class="contact-details"><a id="phoneLink" href="#"></a><a id="emailLink" href="#"></a><span>Monday – Saturday · 10:00 AM – 9:00 PM</span><span>24/7 Response Support</span></div>
+        </div>
+        <form class="contact-form reveal" onsubmit="sendMessage(event)">
+          <input id="formName" required placeholder="Your Name">
+          <input id="formEmail" type="email" required placeholder="Email Address">
+          <select id="formService"><option>Video Editing</option><option>Property Promotion</option><option>Influencer & Vlog Promotion</option><option>Brand Marketing</option><option>Other</option></select>
+          <textarea id="formMessage" required rows="6" placeholder="Tell me about your project..."></textarea>
+          <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          <small>Secure contact form · Your email app will open to send the message.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><div class="logo">S<span>.</span></div><p>Need property advertisements, influencer promotions, or brand marketing? Contact us for customized promotional packages tailored to your business goals.</p></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
+    <div><h4>Social Media</h4><div id="socialLinks" class="socials"></div></div>
+    <div><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div>
+    <div class="copyright">© <span id="year"></span> Shahzaib. All rights reserved.</div>
+  </footer>
+
+  <a id="whatsappFloat" class="floating whatsapp" href="#" aria-label="WhatsApp">WA</a>
+  <a href="#contact" class="floating hire">Hire Me</a>
+  <button id="topBtn" class="top-btn" aria-label="Back to top">↑</button>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
