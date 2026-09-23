@@ -2,18 +2,20 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="Shahzaib — Professional Video Editor with 10+ years of experience in cinematic editing, color grading, motion graphics and promotional marketing."
+    content="Shahzaib — Professional Video Editor specializing in cinematic editing, color grading, motion graphics and promotional marketing."
   >
 
-  <meta name="theme-color" content="#0B0B0B">
+  <meta name="theme-color" content="#080808">
 
   <title>Shahzaib | Professional Video Editor</title>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -28,7 +30,593 @@
     rel="stylesheet"
   >
 
+
   <link rel="stylesheet" href="style.css">
+
+
+  <!-- =================================
+       NEW HERO INTERFACE STYLE
+  ================================== -->
+
+  <style>
+
+    /* RESET */
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    body {
+      margin: 0;
+      background: #080808;
+      color: #ffffff;
+      font-family: "Inter", sans-serif;
+    }
+
+
+    /* ================================
+       HERO
+    ================================= */
+
+    .new-hero {
+      min-height: 92vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 80px 7%;
+      background:
+        radial-gradient(
+          circle at 90% 45%,
+          rgba(255, 0, 0, 0.09),
+          transparent 35%
+        ),
+        #080808;
+    }
+
+
+    .new-hero-container {
+      width: 100%;
+      max-width: 1450px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+
+    /* ================================
+       LEFT SIDE
+    ================================= */
+
+    .hero-left {
+      position: relative;
+      z-index: 2;
+    }
+
+
+    .hero-name {
+      margin: 0;
+
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: clamp(65px, 8vw, 120px);
+
+      line-height: 0.9;
+
+      font-weight: 800;
+
+      letter-spacing: -5px;
+
+      color: #ed111b;
+
+      margin-bottom: 35px;
+    }
+
+
+    .hero-title {
+      margin: 0;
+
+      max-width: 800px;
+
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: clamp(45px, 5vw, 78px);
+
+      line-height: 0.95;
+
+      font-weight: 800;
+
+      letter-spacing: -3px;
+
+      color: #ffffff;
+
+      text-transform: uppercase;
+    }
+
+
+    .hero-title span {
+      color: #ed111b;
+    }
+
+
+    .experience-badge {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      margin-top: 18px;
+
+      padding: 8px 18px;
+
+      border: 1px solid rgba(255,255,255,0.15);
+
+      border-radius: 30px;
+
+      color: #ff2028;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: 2px;
+
+      background: rgba(255,255,255,0.025);
+    }
+
+
+    .experience-badge::before {
+      content: "▣";
+
+      font-size: 12px;
+    }
+
+
+    .hero-services {
+      margin-top: 20px;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      color: #c7c7c7;
+
+      max-width: 720px;
+    }
+
+
+    .hero-services strong {
+      color: #ffffff;
+    }
+
+
+    .hero-meta {
+      margin-top: 12px;
+
+      font-size: 13px;
+
+      line-height: 1.8;
+
+      color: #8c8c8c;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+    }
+
+
+    /* ================================
+       BUTTONS
+    ================================= */
+
+    .hero-actions {
+      display: flex;
+
+      align-items: center;
+
+      gap: 18px;
+
+      flex-wrap: wrap;
+
+      margin-top: 35px;
+    }
+
+
+    .hero-btn {
+      height: 58px;
+
+      padding: 0 30px;
+
+      border-radius: 32px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      text-decoration: none;
+
+      font-weight: 800;
+
+      font-size: 14px;
+
+      transition: 0.3s ease;
+    }
+
+
+    .hero-btn-primary {
+      background: #ff1018;
+
+      color: #ffffff;
+
+      box-shadow:
+        0 10px 35px rgba(255, 0, 0, 0.22);
+    }
+
+
+    .hero-btn-primary:hover {
+      transform: translateY(-3px);
+
+      background: #ff242b;
+
+      box-shadow:
+        0 15px 45px rgba(255, 0, 0, 0.35);
+    }
+
+
+    .hero-btn-outline {
+      border: 1px solid #333333;
+
+      background: rgba(255,255,255,0.01);
+
+      color: #ffffff;
+    }
+
+
+    .hero-btn-outline:hover {
+      border-color: #ff2028;
+
+      color: #ff2028;
+
+      transform: translateY(-3px);
+    }
+
+
+    .hero-link {
+      color: #a0a0a0;
+
+      text-decoration: none;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition: 0.3s ease;
+    }
+
+
+    .hero-link:hover {
+      color: #ffffff;
+    }
+
+
+    /* ================================
+       RIGHT IMAGE
+    ================================= */
+
+    .hero-right {
+      position: relative;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+    }
+
+
+    .hero-image-card {
+      width: min(100%, 570px);
+
+      aspect-ratio: 0.78;
+
+      position: relative;
+
+      border-radius: 28px;
+
+      overflow: visible;
+
+      padding: 0;
+
+      background: #111;
+
+      box-shadow:
+        0 35px 90px rgba(0,0,0,0.6);
+    }
+
+
+    .hero-image-card::before {
+      content: "";
+
+      position: absolute;
+
+      inset: -2px;
+
+      border-radius: 30px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #ff161e,
+          #8b0000 50%,
+          #ff161e
+        );
+
+      z-index: 0;
+    }
+
+
+    .hero-image-wrap {
+      position: absolute;
+
+      inset: 4px;
+
+      border-radius: 25px;
+
+      overflow: hidden;
+
+      background: #111;
+
+      z-index: 1;
+    }
+
+
+    .hero-image {
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      display: block;
+    }
+
+
+    .hero-image-overlay {
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to bottom,
+          transparent 55%,
+          rgba(0,0,0,0.85) 100%
+        );
+
+      pointer-events: none;
+    }
+
+
+    /* ================================
+       IMAGE TEXT
+    ================================= */
+
+    .image-name {
+      position: absolute;
+
+      bottom: 75px;
+
+      right: 35px;
+
+      z-index: 3;
+
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: 25px;
+
+      font-weight: 800;
+
+      color: #ffffff;
+
+      letter-spacing: 1px;
+    }
+
+
+    .image-role {
+      position: absolute;
+
+      bottom: 48px;
+
+      right: 35px;
+
+      z-index: 3;
+
+      color: #ff161e;
+
+      font-size: 10px;
+
+      letter-spacing: 3px;
+
+      font-weight: 700;
+    }
+
+
+    /* ================================
+       PROJECT CARD
+    ================================= */
+
+    .project-card {
+      position: absolute;
+
+      left: -35px;
+
+      bottom: -25px;
+
+      z-index: 5;
+
+      min-width: 205px;
+
+      padding: 20px 24px;
+
+      border: 1px solid rgba(255,255,255,0.12);
+
+      border-radius: 18px;
+
+      background: rgba(18,18,18,0.92);
+
+      backdrop-filter: blur(15px);
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.45);
+    }
+
+
+    .project-number {
+      color: #ff161e;
+
+      font-size: 22px;
+
+      font-weight: 800;
+
+      display: block;
+    }
+
+
+    .project-text {
+      margin-top: 5px;
+
+      color: #aaa;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* ================================
+       RESPONSIVE
+    ================================= */
+
+    @media (max-width: 900px) {
+
+      .new-hero {
+        padding: 70px 25px;
+      }
+
+
+      .new-hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+      }
+
+
+      .hero-left {
+        text-align: center;
+      }
+
+
+      .hero-name {
+        letter-spacing: -3px;
+      }
+
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+
+      .hero-services,
+      .hero-meta {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+      .hero-right {
+        max-width: 500px;
+
+        width: 100%;
+
+        margin: auto;
+      }
+
+
+      .project-card {
+        left: 10px;
+      }
+
+    }
+
+
+    @media (max-width: 550px) {
+
+      .new-hero {
+        padding: 60px 18px;
+      }
+
+
+      .hero-name {
+        font-size: 55px;
+      }
+
+
+      .hero-title {
+        font-size: 40px;
+
+        letter-spacing: -2px;
+      }
+
+
+      .hero-services {
+        font-size: 14px;
+      }
+
+
+      .hero-image-card {
+        width: 92%;
+      }
+
+
+      .project-card {
+        min-width: 170px;
+
+        padding: 15px 18px;
+      }
+
+
+      .image-name {
+        right: 22px;
+
+        bottom: 65px;
+      }
+
+
+      .image-role {
+        right: 22px;
+
+        bottom: 40px;
+      }
+
+    }
+
+  </style>
 
 </head>
 
@@ -36,9 +624,9 @@
 <body>
 
 
-  <!-- ================================
+  <!-- =================================
        PRELOADER
-  ================================= -->
+  ================================== -->
 
   <div id="preloader" class="preloader">
 
@@ -64,9 +652,9 @@
 
 
 
-  <!-- ================================
+  <!-- =================================
        BACKGROUND
-  ================================= -->
+  ================================== -->
 
   <div class="bg-orb orb-one"></div>
 
@@ -74,13 +662,16 @@
 
 
 
-  <!-- ================================
+  <!-- =================================
        NAVIGATION
-  ================================= -->
+  ================================== -->
 
   <header class="nav">
 
-    <a class="logo" href="#home">
+    <a
+      class="logo"
+      href="#home"
+    >
       Shahzaib<span>.</span>
     </a>
 
@@ -113,6 +704,7 @@
 
       <a href="#contact">Contact</a>
 
+
       <button
         id="themeToggle"
         class="icon-btn"
@@ -127,75 +719,100 @@
 
 
 
-  <!-- ================================
-       MAIN
-  ================================= -->
+  <!-- =================================
+       NEW HERO
+  ================================== -->
 
-  <main>
+  <section
+    id="home"
+    class="new-hero"
+  >
 
-
-
-    <!-- ================================
-         HERO
-    ================================= -->
-
-    <section
-      id="home"
-      class="hero section"
-    >
+    <div class="new-hero-container">
 
 
-      <div class="hero-copy reveal">
+      <!-- LEFT -->
+
+      <div class="hero-left">
 
 
-        <div class="eyebrow">
-          10+ YEARS • CREATIVE VIDEO PRODUCTION
-        </div>
-
-
-        <!-- CHANGED:
-             Turning Stories Into Cinematic Experiences.
-             ↓
-             Professional Video Editor
-        -->
-
-        <h1>
-          Professional<br>
-          Video Editor
+        <h1 class="hero-name">
+          Shahzaib
         </h1>
 
 
-        <p class="hero-sub">
-          Professional Video Editor
-        </p>
+        <h2 class="hero-title">
+
+          Professional Video
+
+          <br>
+
+          <span>Editor</span>
+
+        </h2>
 
 
-        <p class="hero-meta">
-          Cinematic Editing • Color Grading • Motion Graphics
-        </p>
+        <div class="experience-badge">
+          10+ YEARS EXPERIENCE
+        </div>
 
 
-        <p class="hero-meta">
-          Video Editing • Property Promotions • Brand Marketing • Influencer Collaborations
-        </p>
+        <div class="hero-services">
+
+          <strong>Cinematic Editing</strong>
+
+          • Color Grading
+
+          • Motion Graphics
+
+        </div>
 
 
-        <div class="cta-row">
+        <div class="hero-meta">
+
+          VIDEO EDITING
+
+          • PROPERTY PROMOTIONS
+
+          • BRAND MARKETING
+
+          • INFLUENCER COLLABORATIONS
+
+        </div>
+
+
+        <div class="hero-actions">
 
 
           <a
-            class="btn btn-primary"
             href="#contact"
+            class="hero-btn hero-btn-primary"
           >
-            Hire Me
+            HIRE ME
           </a>
 
 
           <a
-            class="btn btn-glass"
             href="#portfolio"
+            class="hero-btn hero-btn-outline"
           >
-            View Portfolio
+            ▶ &nbsp; PORTFOLIO
+          </a>
+
+
+          <a
+            href="#portfolio"
+            class="hero-link"
+          >
+            SHOWREEL
+          </a>
+
+
+          <a
+            href="#color"
+            class="hero-link"
+          >
+            ☷ &nbsp; BEFORE & AFTER
           </a>
 
 
@@ -206,35 +823,58 @@
 
 
 
-      <!-- ================================
-           HERO IMAGE
-           Video / Cinematic Reel replaced
-           with profile.jpg
-      ================================= -->
+      <!-- RIGHT IMAGE -->
 
-      <div class="hero-visual reveal">
+      <div class="hero-right">
 
 
-        <div class="video-card">
+        <div class="hero-image-card">
 
 
-          <div class="fake-video">
+          <div class="hero-image-wrap">
 
+
+            <!--
+              YOUR PHOTO
+              Existing GitHub file:
+              assets/profile.jpg
+            -->
 
             <img
               src="assets/profile.jpg"
-              alt="Shahzaib - Professional Video Editor"
-              class="showreel-image"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-                border-radius: inherit;
-              "
+              alt="Shahzaib Professional Video Editor"
+              class="hero-image"
             >
 
 
+            <div class="hero-image-overlay"></div>
+
+
+            <div class="image-name">
+              SHAHZAIB
+            </div>
+
+
+            <div class="image-role">
+              PROFESSIONAL VIDEO EDITOR
+            </div>
+
+
+          </div>
+
+
+          <!-- PROJECT CARD -->
+
+          <div class="project-card">
+
+            <span class="project-number">
+              300+
+            </span>
+
+            <div class="project-text">
+              Projects Delivered
+            </div>
+
           </div>
 
 
@@ -244,614 +884,551 @@
       </div>
 
 
-    </section>
+    </div>
+
+  </section>
 
 
 
-    <!-- ================================
-         ABOUT
-    ================================= -->
+  <!-- =================================
+       ABOUT
+  ================================== -->
 
-    <section
-      id="about"
-      class="section split"
-    >
+  <section
+    id="about"
+    class="section split"
+  >
+
+    <div class="section-heading reveal">
+
+      <span>
+        01 / ABOUT
+      </span>
+
+      <h2>
+        Experience that makes every frame matter.
+      </h2>
+
+    </div>
 
 
-      <div class="section-heading reveal">
+    <div class="about-copy reveal">
 
-        <span>
-          01 / ABOUT
-        </span>
+      <p>
+        I’m Shahzaib, a professional video editor with more than 10 years of experience creating cinematic, engaging and conversion-focused content for creators, brands and businesses.
+      </p>
 
-        <h2>
-          Experience that makes every frame matter.
-        </h2>
+
+      <div class="skill-grid">
+
+        <span>Adobe Premiere Pro</span>
+        <span>Adobe Photoshop</span>
+        <span>Adobe After Effects</span>
+        <span>Adobe Audition</span>
+        <span>AI Video Animation</span>
+        <span>AI Thumbnail Design</span>
+        <span>Manual Thumbnail Design</span>
+        <span>Color Grading</span>
+        <span>Cinematic Editing</span>
+        <span>Motion Graphics</span>
+        <span>Audio Noise Removal</span>
+        <span>Sound Design</span>
+        <span>Storytelling</span>
+        <span>Thumbnail Creation</span>
+        <span>Professional YouTube Editing</span>
+        <span>High Quality Branding</span>
 
       </div>
 
+    </div>
+
+  </section>
 
 
-      <div class="about-copy reveal">
 
+  <!-- =================================
+       COLOR
+  ================================== -->
+
+  <section
+    id="color"
+    class="section grading"
+  >
+
+    <div class="section-heading reveal">
+
+      <span>
+        02 / COLOR
+      </span>
+
+      <h2>
+        Before & After
+      </h2>
+
+      <p>
+        Drag the handle to compare the original and cinematic grade.
+      </p>
+
+    </div>
+
+
+    <div class="compare reveal">
+
+      <div class="compare-after"></div>
+
+      <div class="compare-before"></div>
+
+      <div class="compare-label before-label">
+        BEFORE
+      </div>
+
+      <div class="compare-label after-label">
+        AFTER
+      </div>
+
+      <input
+        id="compareRange"
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-label="Before after comparison"
+      >
+
+      <div class="compare-handle"></div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       SERVICES
+  ================================== -->
+
+  <section
+    id="services"
+    class="section"
+  >
+
+    <div class="section-heading reveal">
+
+      <span>
+        03 / SERVICES
+      </span>
+
+      <h2>
+        Built for attention. Designed for results.
+      </h2>
+
+    </div>
+
+
+    <div
+      id="servicesGrid"
+      class="card-grid"
+    ></div>
+
+  </section>
+
+
+
+  <!-- =================================
+       PORTFOLIO
+  ================================== -->
+
+  <section
+    id="portfolio"
+    class="section"
+  >
+
+    <div class="section-heading reveal">
+
+      <span>
+        04 / SHOWREEL
+      </span>
+
+      <h2>
+        Selected work
+      </h2>
+
+    </div>
+
+
+    <div
+      id="portfolioGrid"
+      class="portfolio-grid"
+    ></div>
+
+  </section>
+
+
+
+  <!-- =================================
+       PRICING
+  ================================== -->
+
+  <section
+    id="pricing"
+    class="section"
+  >
+
+    <div class="section-heading reveal">
+
+      <span>
+        05 / PRICING
+      </span>
+
+      <h2>
+        Simple packages. Premium output.
+      </h2>
+
+    </div>
+
+
+    <div
+      id="pricingGrid"
+      class="pricing-grid"
+    ></div>
+
+  </section>
+
+
+
+  <!-- =================================
+       TESTIMONIALS
+  ================================== -->
+
+  <section
+    id="testimonials"
+    class="section"
+  >
+
+    <div class="section-heading reveal">
+
+      <span>
+        06 / TESTIMONIALS
+      </span>
+
+      <h2>
+        What clients say
+      </h2>
+
+    </div>
+
+
+    <div class="testimonial-grid">
+
+
+      <article class="testimonial reveal">
+
+        <div class="stars">
+          ★★★★★
+        </div>
 
         <p>
-          I’m Shahzaib, a professional video editor with more than 10 years of experience creating cinematic, engaging and conversion-focused content for creators, brands and businesses.
+          “Add your best client review here. The animated card is ready for your real testimonial.”
+        </p>
+
+        <strong>
+          Client Name
+        </strong>
+
+        <small>
+          Brand / Creator
+        </small>
+
+      </article>
+
+
+      <article class="testimonial reveal">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “Replace this text with a verified client testimonial that highlights quality, communication and results.”
+        </p>
+
+        <strong>
+          Client Name
+        </strong>
+
+        <small>
+          Business Owner
+        </small>
+
+      </article>
+
+
+      <article class="testimonial reveal">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “Your portfolio deserves social proof. Add real reviews here to build trust with new clients.”
+        </p>
+
+        <strong>
+          Client Name
+        </strong>
+
+        <small>
+          Content Creator
+        </small>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       FAQ
+  ================================== -->
+
+  <section
+    id="faq"
+    class="section"
+  >
+
+    <div class="section-heading reveal">
+
+      <span>
+        07 / FAQ
+      </span>
+
+      <h2>
+        Frequently asked questions
+      </h2>
+
+    </div>
+
+
+    <div class="faq">
+
+
+      <details>
+
+        <summary>
+          How long does a video take?
+        </summary>
+
+        <p>
+          Delivery depends on video length, complexity and package. The listed packages show typical delivery windows.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Do you offer revisions?
+        </summary>
+
+        <p>
+          Yes. Revisions are included according to your selected package, with custom workflows available for larger projects.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Can you promote my business or property?
+        </summary>
+
+        <p>
+          Yes. We offer complete promotional services, including professional property advertisement videos, female presenters for real estate marketing, influencer collaborations, YouTube vlog promotions, Facebook promotions, Instagram Reels, TikTok campaigns, and customized brand marketing solutions.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Can I request a custom package?
+        </summary>
+
+        <p>
+          Absolutely. Contact me for a tailored editing or promotional package based on your content volume and goals.
+        </p>
+
+      </details>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       CONTACT
+  ================================== -->
+
+  <section
+    id="contact"
+    class="section contact-section"
+  >
+
+    <div class="section-heading reveal">
+
+      <span>
+        08 / CONTACT
+      </span>
+
+      <h2>
+        Let’s create something unforgettable.
+      </h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <div class="contact-info reveal">
+
+        <p class="promo-text">
+
+          Need More Than Video Editing? We also provide complete promotional solutions.
+
+          <br><br>
+
+          ✔ Professional Female Models for Property Advertisements
+          <br>
+          ✔ Brand & Product Promotions
+          <br>
+          ✔ Real Estate Marketing Campaigns
+          <br>
+          ✔ Social Media Influencer Marketing
+          <br>
+          ✔ YouTube Vlog Promotions
+          <br>
+          ✔ Facebook Page Promotions
+          <br>
+          ✔ Instagram & TikTok Promotions
+          <br>
+          ✔ Million-View Promotional Campaigns
+
+          <br><br>
+
+          Whether you want to promote a property, business, brand, restaurant, housing society, or any product, we can help connect your promotion with high-performing content creators and deliver premium promotional videos. Contact us today for a custom marketing package.
+
         </p>
 
 
+        <div class="contact-details">
 
-        <div class="skill-grid">
+          <a
+            id="phoneLink"
+            href="#"
+          ></a>
 
-          <span>Adobe Premiere Pro</span>
+          <a
+            id="emailLink"
+            href="#"
+          ></a>
 
-          <span>Adobe Photoshop</span>
+          <span>
+            Monday – Saturday · 10:00 AM – 9:00 PM
+          </span>
 
-          <span>Adobe After Effects</span>
-
-          <span>Adobe Audition</span>
-
-          <span>AI Video Animation</span>
-
-          <span>AI Thumbnail Design</span>
-
-          <span>Manual Thumbnail Design</span>
-
-          <span>Color Grading</span>
-
-          <span>Cinematic Editing</span>
-
-          <span>Motion Graphics</span>
-
-          <span>Audio Noise Removal</span>
-
-          <span>Sound Design</span>
-
-          <span>Storytelling</span>
-
-          <span>Thumbnail Creation</span>
-
-          <span>Professional YouTube Editing</span>
-
-          <span>High Quality Branding</span>
+          <span>
+            24/7 Response Support
+          </span>
 
         </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ================================
-         COLOR GRADING
-    ================================= -->
-
-    <section class="section grading">
-
-
-      <div class="section-heading reveal">
-
-        <span>
-          02 / COLOR
-        </span>
-
-        <h2>
-          Before & After
-        </h2>
-
-        <p>
-          Drag the handle to compare the original and cinematic grade.
-        </p>
 
       </div>
 
 
 
-      <div class="compare reveal">
-
-
-        <div class="compare-after"></div>
-
-        <div class="compare-before"></div>
-
-
-        <div class="compare-label before-label">
-          BEFORE
-        </div>
-
-
-        <div class="compare-label after-label">
-          AFTER
-        </div>
-
+      <form
+        class="contact-form reveal"
+        onsubmit="sendMessage(event)"
+      >
 
         <input
-          id="compareRange"
-          type="range"
-          min="0"
-          max="100"
-          value="50"
-          aria-label="Before after comparison"
+          id="formName"
+          required
+          placeholder="Your Name"
         >
 
-
-        <div class="compare-handle"></div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ================================
-         SERVICES
-    ================================= -->
-
-    <section
-      id="services"
-      class="section"
-    >
-
-
-      <div class="section-heading reveal">
-
-        <span>
-          03 / SERVICES
-        </span>
-
-        <h2>
-          Built for attention. Designed for results.
-        </h2>
-
-      </div>
-
-
-      <div
-        id="servicesGrid"
-        class="card-grid"
-      ></div>
-
-
-    </section>
-
-
-
-    <!-- ================================
-         PORTFOLIO
-    ================================= -->
-
-    <section
-      id="portfolio"
-      class="section"
-    >
-
-
-      <div class="section-heading reveal">
-
-        <span>
-          04 / SHOWREEL
-        </span>
-
-        <h2>
-          Selected work
-        </h2>
-
-      </div>
-
-
-      <div
-        id="portfolioGrid"
-        class="portfolio-grid"
-      ></div>
-
-
-    </section>
-
-
-
-    <!-- ================================
-         PRICING
-    ================================= -->
-
-    <section
-      id="pricing"
-      class="section"
-    >
-
-
-      <div class="section-heading reveal">
-
-        <span>
-          05 / PRICING
-        </span>
-
-        <h2>
-          Simple packages. Premium output.
-        </h2>
-
-      </div>
-
-
-      <div
-        id="pricingGrid"
-        class="pricing-grid"
-      ></div>
-
-
-    </section>
-
-
-
-    <!-- ================================
-         TESTIMONIALS
-    ================================= -->
-
-    <section
-      id="testimonials"
-      class="section"
-    >
-
-
-      <div class="section-heading reveal">
-
-        <span>
-          06 / TESTIMONIALS
-        </span>
-
-        <h2>
-          What clients say
-        </h2>
-
-      </div>
-
-
-
-      <div class="testimonial-grid">
-
-
-        <article class="testimonial reveal">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Add your best client review here. The animated card is ready for your real testimonial.”
-          </p>
-
-          <strong>
-            Client Name
-          </strong>
-
-          <small>
-            Brand / Creator
-          </small>
-
-        </article>
-
-
-
-        <article class="testimonial reveal">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Replace this text with a verified client testimonial that highlights quality, communication and results.”
-          </p>
-
-          <strong>
-            Client Name
-          </strong>
-
-          <small>
-            Business Owner
-          </small>
-
-        </article>
-
-
-
-        <article class="testimonial reveal">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Your portfolio deserves social proof. Add real reviews here to build trust with new clients.”
-          </p>
-
-          <strong>
-            Client Name
-          </strong>
-
-          <small>
-            Content Creator
-          </small>
-
-        </article>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ================================
-         FAQ
-    ================================= -->
-
-    <section
-      id="faq"
-      class="section"
-    >
-
-
-      <div class="section-heading reveal">
-
-        <span>
-          07 / FAQ
-        </span>
-
-        <h2>
-          Frequently asked questions
-        </h2>
-
-      </div>
-
-
-
-      <div class="faq">
-
-
-        <details>
-
-          <summary>
-            How long does a video take?
-          </summary>
-
-          <p>
-            Delivery depends on video length, complexity and package. The listed packages show typical delivery windows.
-          </p>
-
-        </details>
-
-
-
-        <details>
-
-          <summary>
-            Do you offer revisions?
-          </summary>
-
-          <p>
-            Yes. Revisions are included according to your selected package, with custom workflows available for larger projects.
-          </p>
-
-        </details>
-
-
-
-        <details>
-
-          <summary>
-            Can you promote my business or property?
-          </summary>
-
-          <p>
-            Yes. We offer complete promotional services, including professional property advertisement videos, female presenters for real estate marketing, influencer collaborations, YouTube vlog promotions, Facebook promotions, Instagram Reels, TikTok campaigns, and customized brand marketing solutions.
-          </p>
-
-        </details>
-
-
-
-        <details>
-
-          <summary>
-            Can I request a custom package?
-          </summary>
-
-          <p>
-            Absolutely. Contact me for a tailored editing or promotional package based on your content volume and goals.
-          </p>
-
-        </details>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ================================
-         CONTACT
-    ================================= -->
-
-    <section
-      id="contact"
-      class="section contact-section"
-    >
-
-
-      <div class="section-heading reveal">
-
-        <span>
-          08 / CONTACT
-        </span>
-
-        <h2>
-          Let’s create something unforgettable.
-        </h2>
-
-      </div>
-
-
-
-      <div class="contact-grid">
-
-
-        <div class="contact-info reveal">
-
-
-          <p class="promo-text">
-
-            Need More Than Video Editing? We also provide complete promotional solutions.
-
-            <br><br>
-
-            ✔ Professional Female Models for Property Advertisements
-            <br>
-
-            ✔ Brand & Product Promotions
-            <br>
-
-            ✔ Real Estate Marketing Campaigns
-            <br>
-
-            ✔ Social Media Influencer Marketing
-            <br>
-
-            ✔ YouTube Vlog Promotions
-            <br>
-
-            ✔ Facebook Page Promotions
-            <br>
-
-            ✔ Instagram & TikTok Promotions
-            <br>
-
-            ✔ Million-View Promotional Campaigns
-
-            <br><br>
-
-            Whether you want to promote a property, business, brand, restaurant, housing society, or any product, we can help connect your promotion with high-performing content creators and deliver premium promotional videos. Contact us today for a custom marketing package.
-
-          </p>
-
-
-
-          <div class="contact-details">
-
-            <a
-              id="phoneLink"
-              href="#"
-            ></a>
-
-            <a
-              id="emailLink"
-              href="#"
-            ></a>
-
-            <span>
-              Monday – Saturday · 10:00 AM – 9:00 PM
-            </span>
-
-            <span>
-              24/7 Response Support
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-
-        <form
-          class="contact-form reveal"
-          onsubmit="sendMessage(event)"
+        <input
+          id="formEmail"
+          type="email"
+          required
+          placeholder="Email Address"
         >
 
+        <select id="formService">
 
-          <input
-            id="formName"
-            required
-            placeholder="Your Name"
-          >
+          <option>
+            Video Editing
+          </option>
 
+          <option>
+            Property Promotion
+          </option>
 
-          <input
-            id="formEmail"
-            type="email"
-            required
-            placeholder="Email Address"
-          >
+          <option>
+            Influencer & Vlog Promotion
+          </option>
 
+          <option>
+            Brand Marketing
+          </option>
 
-          <select id="formService">
+          <option>
+            Other
+          </option>
 
-            <option>
-              Video Editing
-            </option>
-
-            <option>
-              Property Promotion
-            </option>
-
-            <option>
-              Influencer & Vlog Promotion
-            </option>
-
-            <option>
-              Brand Marketing
-            </option>
-
-            <option>
-              Other
-            </option>
-
-          </select>
+        </select>
 
 
-          <textarea
-            id="formMessage"
-            required
-            rows="6"
-            placeholder="Tell me about your project..."
-          ></textarea>
+        <textarea
+          id="formMessage"
+          required
+          rows="6"
+          placeholder="Tell me about your project..."
+        ></textarea>
 
 
-          <button
-            class="btn btn-primary"
-            type="submit"
-          >
-            Send Inquiry
-          </button>
+        <button
+          class="btn btn-primary"
+          type="submit"
+        >
+          Send Inquiry
+        </button>
 
 
-          <small>
-            Secure contact form · Your email app will open to send the message.
-          </small>
+        <small>
+          Secure contact form · Your email app will open to send the message.
+        </small>
+
+      </form>
 
 
-        </form>
+    </div>
+
+  </section>
 
 
-      </div>
-
-
-    </section>
-
-
-  </main>
-
-
-
-  <!-- ================================
+  <!-- =================================
        FOOTER
-  ================================= -->
+  ================================== -->
 
   <footer class="footer">
 
@@ -867,7 +1444,6 @@
       </p>
 
     </div>
-
 
 
     <div>
@@ -895,7 +1471,6 @@
     </div>
 
 
-
     <div>
 
       <h4>
@@ -908,7 +1483,6 @@
       ></div>
 
     </div>
-
 
 
     <div>
@@ -928,7 +1502,6 @@
     </div>
 
 
-
     <div class="copyright">
 
       ©
@@ -943,10 +1516,9 @@
   </footer>
 
 
-
-  <!-- ================================
+  <!-- =================================
        FLOATING BUTTONS
-  ================================= -->
+  ================================== -->
 
   <a
     id="whatsappFloat"
@@ -975,10 +1547,9 @@
   </button>
 
 
-
-  <!-- ================================
-       JAVASCRIPT
-  ================================= -->
+  <!-- =================================
+       SCRIPTS
+  ================================== -->
 
   <script src="config.js"></script>
 
