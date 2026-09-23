@@ -19,3 +19,272 @@ a{color:inherit;text-decoration:none}.section{max-width:1200px;margin:auto;paddi
 .floating{position:fixed;z-index:40;bottom:22px;padding:12px 16px;border-radius:999px;font-weight:900;font-size:12px;box-shadow:0 12px 35px rgba(0,0,0,.35)}.whatsapp{left:22px;background:#1db954;color:#fff}.hire{right:22px;background:var(--red);color:#fff}.top-btn{position:fixed;right:22px;bottom:75px;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:var(--dark);color:inherit;opacity:0;pointer-events:none;transition:.3s;z-index:40}.top-btn.show{opacity:1;pointer-events:auto}.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:950px){.nav-links{display:none}.nav-links.open{position:absolute;top:65px;left:0;right:0;display:flex;flex-direction:column;padding:22px;background:#111;border:1px solid var(--line);border-radius:16px}.menu-btn{display:block}.hero,.split,.contact-grid{grid-template-columns:1fr}.hero{padding-top:150px}.hero-visual{order:-1}.card-grid,.portfolio-grid{grid-template-columns:repeat(2,1fr)}.pricing-grid{grid-template-columns:repeat(2,1fr)}.testimonial-grid{grid-template-columns:1fr 1fr}.footer{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.section{padding:80px 18px}.hero h1{font-size:49px;letter-spacing:-3px}.card-grid,.portfolio-grid,.pricing-grid,.testimonial-grid,.footer{grid-template-columns:1fr}.compare{height:360px}.video-card{transform:none}.cta-row{flex-direction:column}.btn{width:100%}.floating{bottom:14px}.hire{right:14px}.whatsapp{left:14px}.top-btn{right:14px;bottom:67px}}
+/* =========================================
+   DIRECT NAVIGATION
+   No hamburger / no hidden menu
+========================================= */
+
+.nav {
+  position: fixed;
+
+  top: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: calc(100% - 40px);
+
+  max-width: 1200px;
+
+  min-height: 64px;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px 14px;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  border-radius: 18px;
+
+  background: rgba(8,8,8,.88);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  box-sizing: border-box;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 28px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+
+  white-space: nowrap;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+
+.nav-links a {
+
+  color: #d5d5d5;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: .25s ease;
+
+  flex-shrink: 0;
+}
+
+
+.nav-links a:hover {
+
+  color: #ffffff;
+
+}
+
+
+.nav-links a.active {
+
+  color: #ff161e;
+
+}
+
+
+/* Moon button */
+
+.nav-links .icon-btn {
+
+  width: 38px;
+
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  border-radius: 11px;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  background: rgba(255,255,255,.05);
+
+  color: #fff;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: .25s ease;
+}
+
+
+.nav-links .icon-btn:hover {
+
+  border-color: #ff161e;
+
+  color: #ff161e;
+
+}
+
+
+/* =========================================
+   IMPORTANT:
+   Hide old hamburger if it exists
+========================================= */
+
+.menu-btn {
+
+  display: none !important;
+}
+
+.nav-spacer {
+
+  display: none !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .nav {
+
+    top: 12px;
+
+    width: calc(100% - 28px);
+
+    min-height: 58px;
+
+    padding: 7px 12px;
+
+    border-radius: 17px;
+  }
+
+  .nav-links {
+
+    justify-content: flex-start;
+
+    gap: 22px;
+  }
+
+  .nav-links a {
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+
+  .nav {
+
+    top: 10px;
+
+    width: calc(100% - 22px);
+
+    min-height: 58px;
+
+    padding: 7px 10px;
+
+    border-radius: 16px;
+  }
+
+
+  .nav-links {
+
+    justify-content: flex-start;
+
+    gap: 19px;
+
+    overflow-x: auto;
+
+    padding: 0 3px;
+  }
+
+
+  .nav-links a {
+
+    font-size: 11px;
+
+    letter-spacing: .1px;
+  }
+
+
+  .nav-links .icon-btn {
+
+    width: 34px;
+
+    height: 34px;
+
+    flex-basis: 34px;
+
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   HERO MOBILE SPACING
+   Prevent navigation from covering Shahzaib
+========================================= */
+
+@media (max-width: 900px) {
+
+  .new-hero {
+
+    padding-top: 125px !important;
+
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .new-hero {
+
+    padding-top: 105px !important;
+
+  }
+
+}
