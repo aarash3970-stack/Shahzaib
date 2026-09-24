@@ -5,22 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Shahzaib — Professional Video Editor with 10+ years of experience in cinematic editing, color grading, motion graphics and promotional marketing.">
   <meta name="theme-color" content="#080808">
-
   <title>Shahzaib | Professional Video Editor</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 
   <style>
-
-    /* =========================
-       CINEMATIC HERO
-    ========================= */
-
+    /* New cinematic hero interface */
     .new-hero {
       min-height: 92vh;
       width: 100%;
@@ -28,15 +21,9 @@
       align-items: center;
       position: relative;
       overflow: hidden;
-
       padding: 80px 7%;
-
       background:
-        radial-gradient(
-          circle at 90% 45%,
-          rgba(255,0,0,.09),
-          transparent 35%
-        ),
+        radial-gradient(circle at 90% 45%, rgba(255,0,0,.09), transparent 35%),
         #080808;
     }
 
@@ -44,1689 +31,616 @@
       width: 100%;
       max-width: 1450px;
       margin: auto;
-
       display: grid;
       grid-template-columns: 1.05fr .95fr;
-
       align-items: center;
-
       gap: 70px;
     }
 
-    .hero-left {
-      position: relative;
-      z-index: 2;
-    }
-
-    /* SHAHZAIB */
+    .hero-left { position: relative; z-index: 2; }
 
     .hero-name {
       margin: 0 0 35px;
-
       font-family: "Space Grotesk", sans-serif;
-
       font-size: clamp(65px, 8vw, 120px);
-
       line-height: .9;
-
       font-weight: 800;
-
       letter-spacing: -5px;
-
       color: #ed111b;
     }
-
-    /* PROFESSIONAL VIDEO EDITOR */
 
     .hero-title {
       margin: 0;
-
       max-width: 800px;
-
       font-family: "Space Grotesk", sans-serif;
-
       font-size: clamp(45px, 5vw, 78px);
-
       line-height: .95;
-
       font-weight: 800;
-
       letter-spacing: -3px;
-
       color: #fff;
-
       text-transform: uppercase;
     }
 
-    .hero-title span {
-      color: #ed111b;
-    }
-
-    /* EXPERIENCE */
+    .hero-title span { color: #ed111b; }
 
     .experience-badge {
-
       display: inline-flex;
-
       align-items: center;
-
       gap: 9px;
-
       margin-top: 18px;
-
       padding: 8px 18px;
-
       border: 1px solid rgba(255,255,255,.15);
-
       border-radius: 30px;
-
       color: #ff2028;
-
       font-size: 12px;
-
       font-weight: 700;
-
       letter-spacing: 2px;
-
       background: rgba(255,255,255,.025);
     }
 
-    .experience-badge::before {
-      content: "▣";
-    }
-
-    /* SERVICES */
+    .experience-badge::before { content: "▣"; }
 
     .hero-services {
-
       margin-top: 20px;
-
       font-size: 17px;
-
       line-height: 1.7;
-
       color: #c7c7c7;
-
       max-width: 720px;
     }
 
-    .hero-services strong {
-      color: #fff;
-    }
+    .hero-services strong { color: #fff; }
 
     .hero-meta {
-
       margin-top: 12px;
-
       font-size: 13px;
-
       line-height: 1.8;
-
       color: #8c8c8c;
-
       text-transform: uppercase;
-
       letter-spacing: 2px;
-
       max-width: 780px;
     }
 
-    /* BUTTONS */
-
     .hero-actions {
-
       display: flex;
-
       align-items: center;
-
       gap: 18px;
-
       flex-wrap: wrap;
-
       margin-top: 35px;
     }
 
     .hero-btn {
-
       height: 58px;
-
       padding: 0 30px;
-
       border-radius: 32px;
-
       display: inline-flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 10px;
-
       text-decoration: none;
-
       font-weight: 800;
-
       font-size: 14px;
-
       transition: .3s ease;
     }
 
     .hero-btn-primary {
-
       background: #ff1018;
-
       color: #fff;
-
-      box-shadow:
-        0 10px 35px rgba(255,0,0,.22);
+      box-shadow: 0 10px 35px rgba(255,0,0,.22);
     }
 
     .hero-btn-primary:hover {
-
       transform: translateY(-3px);
-
       background: #ff242b;
-
-      box-shadow:
-        0 15px 45px rgba(255,0,0,.35);
+      box-shadow: 0 15px 45px rgba(255,0,0,.35);
     }
 
     .hero-btn-outline {
-
       border: 1px solid #333;
-
       background: rgba(255,255,255,.01);
-
       color: #fff;
     }
 
     .hero-btn-outline:hover {
-
       border-color: #ff2028;
-
       color: #ff2028;
-
       transform: translateY(-3px);
     }
 
     .hero-link {
-
       color: #a0a0a0;
-
       text-decoration: none;
-
       font-size: 14px;
-
       font-weight: 700;
-
       transition: .3s ease;
     }
 
-    .hero-link:hover {
-      color: #fff;
-    }
-
-    /* =========================
-       IMAGE
-    ========================= */
+    .hero-link:hover { color: #fff; }
 
     .hero-right {
-
       position: relative;
-
       display: flex;
-
       justify-content: center;
-
       align-items: center;
     }
 
     .hero-image-card {
-
       width: min(100%, 570px);
-
       aspect-ratio: .78;
-
       position: relative;
-
       border-radius: 28px;
-
       overflow: visible;
-
       background: #111;
-
-      box-shadow:
-        0 35px 90px rgba(0,0,0,.6);
+      box-shadow: 0 35px 90px rgba(0,0,0,.6);
     }
 
     .hero-image-card::before {
-
       content: "";
-
       position: absolute;
-
       inset: -2px;
-
       border-radius: 30px;
-
-      background:
-        linear-gradient(
-          145deg,
-          #ff161e,
-          #8b0000 50%,
-          #ff161e
-        );
-
+      background: linear-gradient(145deg,#ff161e,#8b0000 50%,#ff161e);
       z-index: 0;
     }
 
     .hero-image-wrap {
-
       position: absolute;
-
       inset: 4px;
-
       border-radius: 25px;
-
       overflow: hidden;
-
       background: #111;
-
       z-index: 1;
     }
 
     .hero-image {
-
       width: 100%;
-
       height: 100%;
-
       object-fit: cover;
-
       object-position: center;
-
       display: block;
     }
 
     .hero-image-overlay {
-
       position: absolute;
-
       inset: 0;
-
-      background:
-        linear-gradient(
-          to bottom,
-          transparent 55%,
-          rgba(0,0,0,.85) 100%
-        );
-
+      background: linear-gradient(to bottom,transparent 55%,rgba(0,0,0,.85) 100%);
       pointer-events: none;
     }
 
     .image-name {
-
       position: absolute;
-
       bottom: 75px;
-
       right: 35px;
-
       z-index: 3;
-
-      font-family:
-        "Space Grotesk",
-        sans-serif;
-
+      font-family: "Space Grotesk",sans-serif;
       font-size: 25px;
-
       font-weight: 800;
-
       color: #fff;
-
       letter-spacing: 1px;
     }
 
     .image-role {
-
       position: absolute;
-
       bottom: 48px;
-
       right: 35px;
-
       z-index: 3;
-
       color: #ff161e;
-
       font-size: 10px;
-
       letter-spacing: 3px;
-
       font-weight: 700;
     }
 
-    /* PROJECT CARD */
-
     .project-card {
-
       position: absolute;
-
       left: -35px;
-
       bottom: -25px;
-
       z-index: 5;
-
       min-width: 205px;
-
       padding: 20px 24px;
-
-      border:
-        1px solid rgba(255,255,255,.12);
-
+      border: 1px solid rgba(255,255,255,.12);
       border-radius: 18px;
-
-      background:
-        rgba(18,18,18,.92);
-
+      background: rgba(18,18,18,.92);
       backdrop-filter: blur(15px);
-
-      box-shadow:
-        0 20px 50px rgba(0,0,0,.45);
+      box-shadow: 0 20px 50px rgba(0,0,0,.45);
     }
 
     .project-number {
-
       color: #ff161e;
-
       font-size: 22px;
-
       font-weight: 800;
-
       display: block;
     }
 
     .project-text {
-
       margin-top: 5px;
-
       color: #aaa;
-
       font-size: 11px;
-
       font-weight: 700;
-
       letter-spacing: 1px;
-
       text-transform: uppercase;
     }
 
-
-    /* =========================
-       TABLET
-    ========================= */
-
     @media (max-width: 900px) {
-
-      .new-hero {
-
-        padding:
-          70px
-          25px
-          80px;
-      }
-
-      .new-hero-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 70px;
-      }
-
-      .hero-left {
-
-        text-align: center;
-      }
-
-      .hero-name {
-
-        letter-spacing: -3px;
-      }
-
-      .hero-actions {
-
-        justify-content: center;
-      }
-
-      .hero-services,
-      .hero-meta {
-
-        margin-left: auto;
-
-        margin-right: auto;
-      }
-
-      .hero-right {
-
-        max-width: 500px;
-
-        width: 100%;
-
-        margin: auto;
-      }
-
-      .project-card {
-
-        left: 10px;
-      }
-
-      /* TOP LOGO IS REMOVED */
-      .nav {
-
-        justify-content: flex-end;
-      }
-
-      .nav-spacer {
-
-        flex: 1;
-      }
-
-      /* EXTRA SPACE UNDER NAV */
-      .new-hero {
-
-        padding-top: 125px;
-      }
+      .new-hero { padding: 70px 25px; }
+      .new-hero-container { grid-template-columns: 1fr; gap: 70px; }
+      .hero-left { text-align: center; }
+      .hero-name { letter-spacing: -3px; }
+      .hero-actions { justify-content: center; }
+      .hero-services,.hero-meta { margin-left: auto; margin-right: auto; }
+      .hero-right { max-width: 500px; width: 100%; margin: auto; }
+      .project-card { left: 10px; }
     }
 
-
-    /* =========================
-       MOBILE
-    ========================= */
-
     @media (max-width: 550px) {
+      .new-hero { padding: 60px 18px; }
+      .hero-name { font-size: 55px; }
+      .hero-title { font-size: 40px; letter-spacing: -2px; }
+      .hero-services { font-size: 14px; }
+      .hero-image-card { width: 92%; }
+      .project-card { min-width: 170px; padding: 15px 18px; }
+      .image-name { right: 22px; bottom: 65px; }
+      .image-role { right: 22px; bottom: 40px; }
+    }
 
-      .new-hero {
+    /* =================================
+       SUBTLE HOVER EFFECT FOR CARDS
+       ================================= */
 
-        padding:
-          60px
-          18px
-          70px;
+    .card-grid > *,
+    .portfolio-grid > *,
+    .pricing-grid > *,
+    .testimonial-grid > * {
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+      transform-origin: center;
+      will-change: transform;
+    }
+
+    .card-grid > *:hover,
+    .portfolio-grid > *:hover,
+    .pricing-grid > *:hover,
+    .testimonial-grid > *:hover {
+      transform: translateY(-4px) scale(1.025);
+      border-color: rgba(255, 20, 30, 0.55);
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35),
+        0 0 18px rgba(255, 20, 30, 0.10);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Service-card hover stays subtle and does not disturb the layout */
+    .card-grid > *:hover {
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.045),
+        rgba(255,255,255,0.018)
+      );
+    }
+
+    /* Respect reduced-motion accessibility settings */
+    @media (prefers-reduced-motion: reduce) {
+      .card-grid > *,
+      .portfolio-grid > *,
+      .pricing-grid > *,
+      .testimonial-grid > * {
+        transition: none;
       }
 
-      .hero-name {
-
-        font-size: 55px;
-
-        margin-bottom: 28px;
-      }
-
-      .hero-title {
-
-        font-size: 40px;
-
-        letter-spacing: -2px;
-      }
-
-      .experience-badge {
-
-        font-size: 11px;
-
-        padding:
-          8px
-          15px;
-      }
-
-      .hero-services {
-
-        font-size: 14px;
-      }
-
-      .hero-meta {
-
-        font-size: 11px;
-
-        letter-spacing: 1.5px;
-      }
-
-      .hero-image-card {
-
-        width: 92%;
-      }
-
-      .project-card {
-
-        min-width: 170px;
-
-        padding:
-          15px
-          18px;
-      }
-
-      .image-name {
-
-        right: 22px;
-
-        bottom: 65px;
-      }
-
-      .image-role {
-
-        right: 22px;
-
-        bottom: 40px;
-
-        font-size: 8px;
-      }
-
-      .hero-btn {
-
-        height: 54px;
-
-        padding:
-          0
-          24px;
+      .card-grid > *:hover,
+      .portfolio-grid > *:hover,
+      .pricing-grid > *:hover,
+      .testimonial-grid > *:hover {
+        transform: none;
       }
     }
 
   </style>
-
 </head>
 
-
 <body>
-
-
-  <!-- =========================
-       PRELOADER
-  ========================= -->
-
   <div id="preloader" class="preloader">
-
     <div class="preloader-inner">
-
       <div class="profile-ring">
-
-        <img
-          id="introPhoto"
-          src="assets/profile.jpg"
-          alt="Shahzaib"
-        >
-
+        <img id="introPhoto" src="assets/profile.jpg" alt="Shahzaib">
       </div>
-
       <h1>Shahzaib</h1>
-
-      <p>
-        Professional Video Editor
-      </p>
-
+      <p>Professional Video Editor</p>
     </div>
-
   </div>
 
-
   <div class="bg-orb orb-one"></div>
-
   <div class="bg-orb orb-two"></div>
 
-
-  <!-- =========================
-       NAVIGATION
-       TOP SHAHZAIB REMOVED
-  ========================= -->
-
   <header class="nav">
-
-    <div
-      class="nav-spacer"
-      aria-hidden="true">
-    </div>
-
-    <button
-      class="menu-btn"
-      aria-label="Open menu">
-
-      <span></span>
-
-      <span></span>
-
-      <span></span>
-
-    </button>
-
+    <a class="logo" href="#home">Shahzaib<span>.</span></a>
+    <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
 
     <nav class="nav-links">
-
-      <a href="#home">
-        Home
-      </a>
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="#portfolio">
-        Portfolio
-      </a>
-
-      <a href="#pricing">
-        Pricing
-      </a>
-
-      <a href="#testimonials">
-        Testimonials
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
-      <button
-        id="themeToggle"
-        class="icon-btn"
-        aria-label="Toggle theme">
-        ☾
-      </button>
-
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">☾</button>
     </nav>
-
   </header>
 
-
   <main>
-
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
-    <section
-      id="home"
-      class="new-hero">
-
+    <!-- NEW HERO -->
+    <section id="home" class="new-hero">
       <div class="new-hero-container">
 
-
-        <!-- LEFT -->
-
         <div class="hero-left">
-
-
-          <h1 class="hero-name">
-            Shahzaib
-          </h1>
-
+          <h1 class="hero-name">Shahzaib</h1>
 
           <h2 class="hero-title">
-
             Professional Video
-
             <br>
-
-            <span>
-              Editor
-            </span>
-
+            <span>Editor</span>
           </h2>
 
-
-          <div class="experience-badge">
-
-            10+ YEARS EXPERIENCE
-
-          </div>
-
+          <div class="experience-badge">10+ YEARS EXPERIENCE</div>
 
           <div class="hero-services">
-
-            <strong>
-              Cinematic Editing
-            </strong>
-
-            • Color Grading
-            • Motion Graphics
-
+            <strong>Cinematic Editing</strong>
+            • Color Grading • Motion Graphics
           </div>
-
 
           <div class="hero-meta">
-
-            VIDEO EDITING
-            • PROPERTY PROMOTIONS
-            • BRAND MARKETING
-            • INFLUENCER COLLABORATIONS
-
+            VIDEO EDITING • PROPERTY PROMOTIONS • BRAND MARKETING • INFLUENCER COLLABORATIONS
           </div>
-
 
           <div class="hero-actions">
+            <a href="#contact" class="hero-btn hero-btn-primary">HIRE ME</a>
 
-
-            <a
-              href="#contact"
-              class="hero-btn hero-btn-primary">
-
-              HIRE ME
-
-            </a>
-
-
-            <a
-              href="#portfolio"
-              class="hero-btn hero-btn-outline">
-
+            <a href="#portfolio" class="hero-btn hero-btn-outline">
               ▶ &nbsp; PORTFOLIO
-
             </a>
 
+            <a href="#portfolio" class="hero-link">SHOWREEL</a>
 
-            <a
-              href="#portfolio"
-              class="hero-link">
-
-              SHOWREEL
-
-            </a>
-
-
-            <a
-              href="#color"
-              class="hero-link">
-
-              ☷ &nbsp; BEFORE & AFTER
-
-            </a>
-
-
+            <a href="#color" class="hero-link">☷ &nbsp; BEFORE & AFTER</a>
           </div>
-
         </div>
 
-
-        <!-- RIGHT IMAGE -->
-
         <div class="hero-right">
-
-
           <div class="hero-image-card">
 
-
             <div class="hero-image-wrap">
-
-
               <img
                 src="assets/profile.jpg"
                 alt="Shahzaib Professional Video Editor"
                 class="hero-image"
               >
 
+              <div class="hero-image-overlay"></div>
 
-              <div
-                class="hero-image-overlay">
-              </div>
-
-
-              <div class="image-name">
-
-                SHAHZAIB
-
-              </div>
-
-
-              <div class="image-role">
-
-                PROFESSIONAL VIDEO EDITOR
-
-              </div>
-
-
+              <div class="image-name">SHAHZAIB</div>
+              <div class="image-role">PROFESSIONAL VIDEO EDITOR</div>
             </div>
-
 
             <div class="project-card">
-
-              <span class="project-number">
-                300+
-              </span>
-
-              <div class="project-text">
-
-                Projects Delivered
-
-              </div>
-
+              <span class="project-number">300+</span>
+              <div class="project-text">Projects Delivered</div>
             </div>
 
-
           </div>
-
         </div>
 
-
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section
-      id="about"
-      class="section split">
-
-
+    <section id="about" class="section split">
       <div class="section-heading reveal">
-
-        <span>
-          01 / ABOUT
-        </span>
-
-        <h2>
-          Experience that makes every frame matter.
-        </h2>
-
+        <span>01 / ABOUT</span>
+        <h2>Experience that makes every frame matter.</h2>
       </div>
-
 
       <div class="about-copy reveal">
-
-        <p>
-
-          I’m Shahzaib, a professional video editor
-          with more than 10 years of experience creating
-          cinematic, engaging and conversion-focused
-          content for creators, brands and businesses.
-
-        </p>
-
+        <p>I’m Shahzaib, a professional video editor with more than 10 years of experience creating cinematic, engaging and conversion-focused content for creators, brands and businesses.</p>
 
         <div class="skill-grid">
-
-          <span>
-            Adobe Premiere Pro
-          </span>
-
-          <span>
-            Adobe Photoshop
-          </span>
-
-          <span>
-            Adobe After Effects
-          </span>
-
-          <span>
-            Adobe Audition
-          </span>
-
-          <span>
-            AI Video Animation
-          </span>
-
-          <span>
-            AI Thumbnail Design
-          </span>
-
-          <span>
-            Manual Thumbnail Design
-          </span>
-
-          <span>
-            Color Grading
-          </span>
-
-          <span>
-            Cinematic Editing
-          </span>
-
-          <span>
-            Motion Graphics
-          </span>
-
-          <span>
-            Audio Noise Removal
-          </span>
-
-          <span>
-            Sound Design
-          </span>
-
-          <span>
-            Storytelling
-          </span>
-
-          <span>
-            Thumbnail Creation
-          </span>
-
-          <span>
-            Professional YouTube Editing
-          </span>
-
-          <span>
-            High Quality Branding
-          </span>
-
+          <span>Adobe Premiere Pro</span><span>Adobe Photoshop</span><span>Adobe After Effects</span><span>Adobe Audition</span>
+          <span>AI Video Animation</span><span>AI Thumbnail Design</span><span>Manual Thumbnail Design</span><span>Color Grading</span>
+          <span>Cinematic Editing</span><span>Motion Graphics</span><span>Audio Noise Removal</span><span>Sound Design</span>
+          <span>Storytelling</span><span>Thumbnail Creation</span><span>Professional YouTube Editing</span><span>High Quality Branding</span>
         </div>
-
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         COLOR
-    ========================= -->
-
-    <section
-      class="section grading"
-      id="color">
-
-
+    <section class="section grading" id="color">
       <div class="section-heading reveal">
-
-        <span>
-          02 / COLOR
-        </span>
-
-        <h2>
-          Before & After
-        </h2>
-
-        <p>
-          Drag the handle to compare the original
-          and cinematic grade.
-        </p>
-
+        <span>02 / COLOR</span>
+        <h2>Before & After</h2>
+        <p>Drag the handle to compare the original and cinematic grade.</p>
       </div>
-
 
       <div class="compare reveal">
-
-
-        <div class="compare-after">
-        </div>
-
-
-        <div class="compare-before">
-        </div>
-
-
-        <div class="compare-label before-label">
-          BEFORE
-        </div>
-
-
-        <div class="compare-label after-label">
-          AFTER
-        </div>
-
-
-        <input
-          id="compareRange"
-          type="range"
-          min="0"
-          max="100"
-          value="50"
-          aria-label="Before after comparison"
-        >
-
-
-        <div class="compare-handle">
-        </div>
-
-
+        <div class="compare-after"></div>
+        <div class="compare-before"></div>
+        <div class="compare-label before-label">BEFORE</div>
+        <div class="compare-label after-label">AFTER</div>
+        <input id="compareRange" type="range" min="0" max="100" value="50" aria-label="Before after comparison">
+        <div class="compare-handle"></div>
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         SERVICES
-    ========================= -->
-
-    <section
-      id="services"
-      class="section">
-
-
+    <section id="services" class="section">
       <div class="section-heading reveal">
-
-        <span>
-          03 / SERVICES
-        </span>
-
-        <h2>
-          Built for attention. Designed for results.
-        </h2>
-
+        <span>03 / SERVICES</span>
+        <h2>Built for attention. Designed for results.</h2>
       </div>
-
-
-      <div
-        id="servicesGrid"
-        class="card-grid">
-      </div>
-
-
+      <div id="servicesGrid" class="card-grid"></div>
     </section>
 
-
-
-    <!-- =========================
-         PORTFOLIO
-    ========================= -->
-
-    <section
-      id="portfolio"
-      class="section">
-
-
+    <section id="portfolio" class="section">
       <div class="section-heading reveal">
-
-        <span>
-          04 / SHOWREEL
-        </span>
-
-        <h2>
-          Selected work
-        </h2>
-
+        <span>04 / SHOWREEL</span>
+        <h2>Selected work</h2>
       </div>
-
-
-      <div
-        id="portfolioGrid"
-        class="portfolio-grid">
-      </div>
-
-
+      <div id="portfolioGrid" class="portfolio-grid"></div>
     </section>
 
-
-
-    <!-- =========================
-         PRICING
-    ========================= -->
-
-    <section
-      id="pricing"
-      class="section">
-
-
+    <section id="pricing" class="section">
       <div class="section-heading reveal">
-
-        <span>
-          05 / PRICING
-        </span>
-
-        <h2>
-          Simple packages. Premium output.
-        </h2>
-
+        <span>05 / PRICING</span>
+        <h2>Simple packages. Premium output.</h2>
       </div>
-
-
-      <div
-        id="pricingGrid"
-        class="pricing-grid">
-      </div>
-
-
+      <div id="pricingGrid" class="pricing-grid"></div>
     </section>
 
-
-
-    <!-- =========================
-         TESTIMONIALS
-    ========================= -->
-
-    <section
-      id="testimonials"
-      class="section">
-
-
+    <section id="testimonials" class="section">
       <div class="section-heading reveal">
-
-        <span>
-          06 / TESTIMONIALS
-        </span>
-
-        <h2>
-          What clients say
-        </h2>
-
+        <span>06 / TESTIMONIALS</span>
+        <h2>What clients say</h2>
       </div>
-
 
       <div class="testimonial-grid">
-
-
         <article class="testimonial reveal">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Add your best client review here.
-            The animated card is ready for your
-            real testimonial.”
-          </p>
-
-          <strong>
-            Client Name
-          </strong>
-
-          <small>
-            Brand / Creator
-          </small>
-
+          <div class="stars">★★★★★</div>
+          <p>“Add your best client review here. The animated card is ready for your real testimonial.”</p>
+          <strong>Client Name</strong>
+          <small>Brand / Creator</small>
         </article>
 
-
-
         <article class="testimonial reveal">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Replace this text with a verified
-            client testimonial that highlights
-            quality, communication and results.”
-          </p>
-
-          <strong>
-            Client Name
-          </strong>
-
-          <small>
-            Business Owner
-          </small>
-
+          <div class="stars">★★★★★</div>
+          <p>“Replace this text with a verified client testimonial that highlights quality, communication and results.”</p>
+          <strong>Client Name</strong>
+          <small>Business Owner</small>
         </article>
 
-
-
         <article class="testimonial reveal">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Your portfolio deserves social proof.
-            Add real reviews here to build trust
-            with new clients.”
-          </p>
-
-          <strong>
-            Client Name
-          </strong>
-
-          <small>
-            Content Creator
-          </small>
-
+          <div class="stars">★★★★★</div>
+          <p>“Your portfolio deserves social proof. Add real reviews here to build trust with new clients.”</p>
+          <strong>Client Name</strong>
+          <small>Content Creator</small>
         </article>
-
-
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         FAQ
-    ========================= -->
-
-    <section
-      id="faq"
-      class="section">
-
-
+    <section id="faq" class="section">
       <div class="section-heading reveal">
-
-        <span>
-          07 / FAQ
-        </span>
-
-        <h2>
-          Frequently asked questions
-        </h2>
-
+        <span>07 / FAQ</span>
+        <h2>Frequently asked questions</h2>
       </div>
-
 
       <div class="faq">
-
-
         <details>
-
-          <summary>
-            How long does a video take?
-          </summary>
-
-          <p>
-
-            Delivery depends on video length,
-            complexity and package.
-            The listed packages show typical
-            delivery windows.
-
-          </p>
-
+          <summary>How long does a video take?</summary>
+          <p>Delivery depends on video length, complexity and package. The listed packages show typical delivery windows.</p>
         </details>
 
-
         <details>
-
-          <summary>
-            Do you offer revisions?
-          </summary>
-
-          <p>
-
-            Yes. Revisions are included according
-            to your selected package, with custom
-            workflows available for larger projects.
-
-          </p>
-
+          <summary>Do you offer revisions?</summary>
+          <p>Yes. Revisions are included according to your selected package, with custom workflows available for larger projects.</p>
         </details>
 
-
         <details>
-
-          <summary>
-            Can you promote my business or property?
-          </summary>
-
-          <p>
-
-            Yes. We offer complete promotional
-            services, including professional property
-            advertisement videos, female presenters
-            for real estate marketing, influencer
-            collaborations, YouTube vlog promotions,
-            Facebook promotions, Instagram Reels,
-            TikTok campaigns, and customized brand
-            marketing solutions.
-
-          </p>
-
+          <summary>Can you promote my business or property?</summary>
+          <p>Yes. We offer complete promotional services, including professional property advertisement videos, female presenters for real estate marketing, influencer collaborations, YouTube vlog promotions, Facebook promotions, Instagram Reels, TikTok campaigns, and customized brand marketing solutions.</p>
         </details>
 
-
         <details>
-
-          <summary>
-            Can I request a custom package?
-          </summary>
-
-          <p>
-
-            Absolutely. Contact me for a tailored
-            editing or promotional package based
-            on your content volume and goals.
-
-          </p>
-
+          <summary>Can I request a custom package?</summary>
+          <p>Absolutely. Contact me for a tailored editing or promotional package based on your content volume and goals.</p>
         </details>
-
-
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section
-      id="contact"
-      class="section contact-section">
-
-
+    <section id="contact" class="section contact-section">
       <div class="section-heading reveal">
-
-        <span>
-          08 / CONTACT
-        </span>
-
-        <h2>
-          Let’s create something unforgettable.
-        </h2>
-
+        <span>08 / CONTACT</span>
+        <h2>Let’s create something unforgettable.</h2>
       </div>
-
 
       <div class="contact-grid">
-
-
         <div class="contact-info reveal">
-
-
           <p class="promo-text">
-
-            Need More Than Video Editing?
-            We also provide complete promotional solutions.
-
+            Need More Than Video Editing? We also provide complete promotional solutions.
             <br><br>
-
-            ✔ Professional Female Models
-            for Property Advertisements
-
-            <br>
-
-            ✔ Brand & Product Promotions
-
-            <br>
-
-            ✔ Real Estate Marketing Campaigns
-
-            <br>
-
-            ✔ Social Media Influencer Marketing
-
-            <br>
-
-            ✔ YouTube Vlog Promotions
-
-            <br>
-
-            ✔ Facebook Page Promotions
-
-            <br>
-
-            ✔ Instagram & TikTok Promotions
-
-            <br>
-
+            ✔ Professional Female Models for Property Advertisements<br>
+            ✔ Brand & Product Promotions<br>
+            ✔ Real Estate Marketing Campaigns<br>
+            ✔ Social Media Influencer Marketing<br>
+            ✔ YouTube Vlog Promotions<br>
+            ✔ Facebook Page Promotions<br>
+            ✔ Instagram & TikTok Promotions<br>
             ✔ Million-View Promotional Campaigns
-
             <br><br>
-
-            Whether you want to promote a property,
-            business, brand, restaurant, housing society,
-            or any product, we can help connect your
-            promotion with high-performing content creators
-            and deliver premium promotional videos.
-
-            Contact us today for a custom marketing package.
-
+            Whether you want to promote a property, business, brand, restaurant, housing society, or any product, we can help connect your promotion with high-performing content creators and deliver premium promotional videos. Contact us today for a custom marketing package.
           </p>
 
-
           <div class="contact-details">
-
-            <a
-              id="phoneLink"
-              href="#">
-            </a>
-
-            <a
-              id="emailLink"
-              href="#">
-            </a>
-
-            <span>
-              Monday – Saturday ·
-              10:00 AM – 9:00 PM
-            </span>
-
-            <span>
-              24/7 Response Support
-            </span>
-
+            <a id="phoneLink" href="#"></a>
+            <a id="emailLink" href="#"></a>
+            <span>Monday – Saturday · 10:00 AM – 9:00 PM</span>
+            <span>24/7 Response Support</span>
           </div>
-
-
         </div>
 
-
-
-        <form
-          class="contact-form reveal"
-          onsubmit="sendMessage(event)">
-
-
-          <input
-            id="formName"
-            required
-            placeholder="Your Name"
-          >
-
-
-          <input
-            id="formEmail"
-            type="email"
-            required
-            placeholder="Email Address"
-          >
-
+        <form class="contact-form reveal" onsubmit="sendMessage(event)">
+          <input id="formName" required placeholder="Your Name">
+          <input id="formEmail" type="email" required placeholder="Email Address">
 
           <select id="formService">
-
-            <option>
-              Video Editing
-            </option>
-
-            <option>
-              Property Promotion
-            </option>
-
-            <option>
-              Influencer & Vlog Promotion
-            </option>
-
-            <option>
-              Brand Marketing
-            </option>
-
-            <option>
-              Other
-            </option>
-
+            <option>Video Editing</option>
+            <option>Property Promotion</option>
+            <option>Influencer & Vlog Promotion</option>
+            <option>Brand Marketing</option>
+            <option>Other</option>
           </select>
 
+          <textarea id="formMessage" required rows="6" placeholder="Tell me about your project..."></textarea>
 
-          <textarea
-            id="formMessage"
-            required
-            rows="6"
-            placeholder="Tell me about your project..."
-          ></textarea>
+          <button class="btn btn-primary" type="submit">Send Inquiry</button>
 
-
-          <button
-            class="btn btn-primary"
-            type="submit">
-
-            Send Inquiry
-
-          </button>
-
-
-          <small>
-
-            Secure contact form ·
-            Your email app will open
-            to send the message.
-
-          </small>
-
-
+          <small>Secure contact form · Your email app will open to send the message.</small>
         </form>
-
-
       </div>
-
     </section>
-
-
   </main>
 
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
   <footer class="footer">
-
-
     <div>
-
-      <div class="logo">
-
-        Shahzaib<span>.</span>
-
-      </div>
-
-      <p>
-
-        Need property advertisements,
-        influencer promotions, or brand marketing?
-        Contact us for customized promotional
-        packages tailored to your business goals.
-
-      </p>
-
+      <div class="logo">Shahzaib<span>.</span></div>
+      <p>Need property advertisements, influencer promotions, or brand marketing? Contact us for customized promotional packages tailored to your business goals.</p>
     </div>
 
-
-
     <div>
-
-      <h4>
-        Quick Links
-      </h4>
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="#portfolio">
-        Portfolio
-      </a>
-
-      <a href="#pricing">
-        Pricing
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
+      <h4>Quick Links</h4>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
     </div>
 
-
-
     <div>
-
-      <h4>
-        Social Media
-      </h4>
-
-      <div
-        id="socialLinks"
-        class="socials">
-      </div>
-
+      <h4>Social Media</h4>
+      <div id="socialLinks" class="socials"></div>
     </div>
 
-
-
     <div>
-
-      <h4>
-        Legal
-      </h4>
-
-      <a href="#">
-        Privacy Policy
-      </a>
-
-      <a href="#">
-        Terms & Conditions
-      </a>
-
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
     </div>
-
-
 
     <div class="copyright">
-
-      ©
-
-      <span id="year">
-      </span>
-
-      Shahzaib.
-      All rights reserved.
-
+      © <span id="year"></span> Shahzaib. All rights reserved.
     </div>
-
-
   </footer>
 
-
-
-  <!-- FLOATING BUTTONS -->
-
-  <a
-    id="whatsappFloat"
-    class="floating whatsapp"
-    href="#"
-    aria-label="WhatsApp">
-
-    WA
-
-  </a>
-
-
-  <a
-    href="#contact"
-    class="floating hire">
-
-    Hire Me
-
-  </a>
-
-
-  <button
-    id="topBtn"
-    class="top-btn"
-    aria-label="Back to top">
-
-    ↑
-
-  </button>
-
-
-
-  <!-- SCRIPTS -->
+  <a id="whatsappFloat" class="floating whatsapp" href="#" aria-label="WhatsApp">WA</a>
+  <a href="#contact" class="floating hire">Hire Me</a>
+  <button id="topBtn" class="top-btn" aria-label="Back to top">↑</button>
 
   <script src="config.js"></script>
-
   <script src="script.js"></script>
-
-
 </body>
-
 </html>
