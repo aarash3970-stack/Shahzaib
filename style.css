@@ -1696,3 +1696,268 @@ section,
 .testimonial-grid{
   max-width:100%;
 }
+
+/* =========================================
+   BEFORE & AFTER SLIDER — RESPONSIVE FIX
+========================================= */
+
+.compare {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    height: clamp(260px, 38vw, 430px);
+
+    margin: 35px auto 0;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    background-color: #111;
+    background-image: url("assets/color_after.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+}
+
+/* Before image */
+.compare-before {
+    position: absolute;
+    inset: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-image: url("assets/color_before.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-right: 2px solid #fff;
+    z-index: 2;
+}
+
+/* Slider input */
+.compare input {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    opacity: 0;
+    z-index: 5;
+
+    cursor: ew-resize;
+}
+
+/* Vertical divider */
+.compare-handle {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 3px;
+
+    background: #fff;
+    z-index: 4;
+
+    pointer-events: none;
+}
+
+/* Slider circle */
+.compare-handle:after {
+    content: "↔";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #fff;
+    color: #111;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* Before / After labels */
+.compare-label {
+    position: absolute;
+    top: 14px;
+
+    z-index: 3;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    background: rgba(0, 0, 0, .7);
+    color: #fff;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.before-label {
+    left: 14px;
+}
+
+.after-label {
+    right: 14px;
+}
+
+/* Cinematic text */
+.compare:after {
+    content: "CINEMATIC";
+
+    position: absolute;
+    right: 20px;
+    bottom: 16px;
+
+    z-index: 1;
+
+    font: 900 clamp(20px, 4vw, 42px)
+          "Space Grotesk", Arial, sans-serif;
+
+    color: #fff;
+    opacity: .15;
+
+    pointer-events: none;
+}
+
+/* Keep section content within the page */
+.section {
+    width: 100%;
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    box-sizing: border-box;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .compare {
+        width: 100%;
+        max-width: 760px;
+
+        height: clamp(260px, 48vw, 360px);
+
+        margin-top: 28px;
+
+        border-radius: 18px;
+    }
+
+    .compare-handle:after {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 70px 18px;
+    }
+
+    .compare {
+        width: 100%;
+        max-width: 100%;
+
+        height: 280px;
+        min-height: 0;
+        max-height: 320px;
+
+        margin: 25px auto 0;
+
+        border-radius: 14px;
+    }
+
+    .compare-before {
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .compare-label {
+        top: 10px;
+
+        padding: 5px 8px;
+
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .before-label {
+        left: 10px;
+    }
+
+    .after-label {
+        right: 10px;
+    }
+
+    .compare-handle {
+        width: 3px;
+    }
+
+    .compare-handle:after {
+        width: 34px;
+        height: 34px;
+
+        font-size: 16px;
+    }
+
+    .compare:after {
+        right: 12px;
+        bottom: 10px;
+
+        font-size: 22px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 380px) {
+
+    .section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .compare {
+        height: 240px;
+        border-radius: 12px;
+    }
+
+    .compare-handle:after {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+}
