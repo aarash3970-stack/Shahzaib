@@ -35,6 +35,8 @@ const SERVICES = [
 ];
 
 const PORTFOLIO = [
+  ["Podcast Editing","https://youtu.be/EHZCl4Gzdog"],
+  ["Frame Making","https://www.facebook.com/share/v/19acxa4M2h/"],
   ["Sample 1","https://youtu.be/SxA39jqA4W8"],
   ["Sample 2","https://youtu.be/HbEbY7rTvLE"],
   ["Sample 3","https://youtu.be/EApf0IgRWyY"],
