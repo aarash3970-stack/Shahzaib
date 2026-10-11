@@ -46,7 +46,7 @@ const PORTFOLIO = [
   ["Short 1","https://youtube.com/shorts/frnh0-k1oD4"],
   ["Short 2","https://youtube.com/shorts/cyZfvreE8YM"],
   ["Short 3","https://youtube.com/shorts/u6e5OR9adhs"],
-  ["Sample 10","https://youtu.be/wCWYmVwLEec"]
+  ["Editing Awards","https://youtu.be/wCWYmVwLEec"]
 ];
 
 const PRICING = [
