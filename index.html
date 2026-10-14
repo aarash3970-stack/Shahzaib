@@ -337,6 +337,29 @@
       }
     }
 
+
+
+    /* Motion Graphic Creation video section */
+    .motion-section { padding-top: 80px; padding-bottom: 80px; }
+    .motion-video-card {
+      width: 100%; max-width: 1200px; margin: 34px auto 0;
+      padding: 10px; border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px; background: linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.018));
+      box-shadow: 0 24px 65px rgba(0,0,0,.35); overflow: hidden;
+    }
+    .motion-video-frame {
+      position: relative; width: 100%; aspect-ratio: 16 / 9;
+      background: #050505; border-radius: 14px; overflow: hidden;
+    }
+    .motion-video-frame video { display:block; width:100%; height:100%; object-fit:contain; background:#050505; }
+    .motion-video-note { margin: 15px 4px 3px; color:#929292; font-size:12px; line-height:1.6; }
+    .motion-video-note strong { color:#ff2028; }
+    @media (max-width:550px) {
+      .motion-section { padding-top:55px; padding-bottom:55px; }
+      .motion-video-card { margin-top:24px; padding:6px; border-radius:16px; }
+      .motion-video-frame { border-radius:10px; }
+    }
+
   </style>
 </head>
 
@@ -450,6 +473,25 @@
           <span>Cinematic Editing</span><span>Motion Graphics</span><span>Audio Noise Removal</span><span>Sound Design</span>
           <span>Storytelling</span><span>Thumbnail Creation</span><span>Professional YouTube Editing</span><span>High Quality Branding</span>
         </div>
+      </div>
+    </section>
+
+    <!-- MOTION GRAPHIC CREATION VIDEO: place your 1920x1080, 1-minute video at assets/motion-graphic-creation.mp4 -->
+    <section id="motion-graphics" class="section motion-section">
+      <div class="section-heading reveal">
+        <span>02 / MOTION GRAPHICS</span>
+        <h2>Motion Graphic Creation</h2>
+        <p>A one-minute showcase of motion graphics and animation.</p>
+      </div>
+
+      <div class="motion-video-card reveal">
+        <div class="motion-video-frame">
+          <video controls preload="metadata" playsinline poster="assets/motion-graphic-poster.jpg" aria-label="Motion Graphic Creation video">
+            <source src="assets/motion-graphic-creation.mp4" type="video/mp4">
+            Your browser does not support HTML5 video. Please use a modern browser to watch this video.
+          </video>
+        </div>
+        <p class="motion-video-note"><strong>VIDEO FORMAT:</strong> 1920 × 1080 (16:9) · <strong>DURATION:</strong> 1 minute</p>
       </div>
     </section>
 
