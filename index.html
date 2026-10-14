@@ -361,6 +361,51 @@
     }
 
   </style>
+
+  <style id="before-after-fix">
+    /* Keep both comparison images at the same full size; reveal the BEFORE
+       image by clipping it, never by shrinking its width. */
+    .compare {
+      --compare-position: 50%;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .compare .compare-after,
+    .compare .compare-before {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-width: 100% !important;
+      max-width: none !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+    }
+    .compare .compare-after { z-index: 0; }
+    .compare .compare-before {
+      z-index: 1;
+      clip-path: inset(0 calc(100% - var(--compare-position)) 0 0) !important;
+    }
+    .compare .compare-label { z-index: 3; }
+    .compare #compareRange {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 !important;
+      opacity: 0 !important;
+      cursor: ew-resize !important;
+      z-index: 5 !important;
+    }
+    .compare .compare-handle {
+      left: var(--compare-position) !important;
+      z-index: 4 !important;
+      pointer-events: none !important;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -731,5 +776,30 @@
 
   <script src="config.js"></script>
   <script src="script.js"></script>
+
+<script id="before-after-fix-script">
+(function () {
+  function initBeforeAfter() {
+    const compare = document.querySelector('.compare');
+    const range = document.getElementById('compareRange');
+    if (!compare || !range) return;
+
+    function updateDivider() {
+      const value = Math.max(0, Math.min(100, Number(range.value) || 0));
+      compare.style.setProperty('--compare-position', value + '%');
+    }
+
+    range.addEventListener('input', updateDivider);
+    range.addEventListener('change', updateDivider);
+    updateDivider();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBeforeAfter);
+  } else {
+    initBeforeAfter();
+  }
+})();
+</script>
+
 </body>
 </html>
