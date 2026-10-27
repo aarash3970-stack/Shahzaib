@@ -360,6 +360,59 @@
       .motion-video-frame { border-radius:10px; }
     }
 
+
+    /* Three portrait video slots (1080x1920 / 9:16), with no visible titles */
+    .vertical-videos-section {
+      padding-top: 35px;
+      padding-bottom: 80px;
+    }
+    .vertical-videos-grid {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      align-items: start;
+    }
+    .vertical-video-card {
+      min-width: 0;
+      padding: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      background: linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+      box-shadow: 0 20px 50px rgba(0,0,0,.32);
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .vertical-video-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,20,30,.5);
+      box-shadow: 0 15px 38px rgba(0,0,0,.4), 0 0 18px rgba(255,20,30,.08);
+    }
+    .vertical-video-frame {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border-radius: 11px;
+      background: #050505;
+    }
+    .vertical-video-frame video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #050505;
+    }
+    @media (max-width: 760px) {
+      .vertical-videos-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+        gap: 20px;
+      }
+      .vertical-videos-section { padding-top: 25px; padding-bottom: 55px; }
+    }
+
   </style>
 
   <style id="before-after-fix">
@@ -535,6 +588,39 @@
             <source src="assets/motion-graphic-creation.mp4" type="video/mp4">
             Your browser does not support HTML5 video. Please use a modern browser to watch this video.
           </video>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- THREE VERTICAL VIDEOS: save your 1080x1920 videos in assets/ using these filenames -->
+    <section id="vertical-videos" class="section vertical-videos-section" aria-label="Vertical video portfolio">
+      <div class="vertical-videos-grid">
+        <div class="vertical-video-card">
+          <div class="vertical-video-frame">
+            <video controls preload="metadata" playsinline aria-label="Vertical video 1">
+              <source src="assets/video-1.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+        </div>
+
+        <div class="vertical-video-card">
+          <div class="vertical-video-frame">
+            <video controls preload="metadata" playsinline aria-label="Vertical video 2">
+              <source src="assets/video-2.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+        </div>
+
+        <div class="vertical-video-card">
+          <div class="vertical-video-frame">
+            <video controls preload="metadata" playsinline aria-label="Vertical video 3">
+              <source src="assets/video-3.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </div>
       </div>
     </section>
