@@ -39,13 +39,12 @@ const PORTFOLIO = [
   ["Frame Making","https://www.facebook.com/share/v/19acxa4M2h/"],
   ["Sample 1","https://youtu.be/SxA39jqA4W8"],
   ["Sample 2","https://youtu.be/HbEbY7rTvLE"],
-  ["Sample 3","https://youtu.be/EApf0IgRWyY"],
+  ["Award Receiving","https://youtu.be/EApf0IgRWyY"],
   ["Sample 4","https://youtu.be/BUZlhCfhZqU"],
   ["Sample 5","https://youtu.be/FS9Eel_HQMM"],
   ["Sample 6","https://youtu.be/9iF81rIMH5s"],
   ["Short 1","https://youtube.com/shorts/frnh0-k1oD4"],
   ["Short 2","https://youtube.com/shorts/cyZfvreE8YM"],
-  ["Short 3","https://youtube.com/shorts/u6e5OR9adhs"],
   ["Editing Awards","https://youtu.be/wCWYmVwLEec"]
 ];
 
