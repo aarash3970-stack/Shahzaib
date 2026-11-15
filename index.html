@@ -27,6 +27,24 @@
         #080808;
     }
 
+    /* Hero background image at 30% opacity, behind all hero content */
+    .new-hero {
+      isolation: isolate;
+    }
+
+    .new-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("assets/hero-background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.30;
+      z-index: -1;
+      pointer-events: none;
+    }
+
     .new-hero-container {
       width: 100%;
       max-width: 1450px;
