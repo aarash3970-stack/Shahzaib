@@ -27,7 +27,7 @@
         #080808;
     }
 
-    /* Hero background image at 30% opacity, behind all hero content */
+    /* Cinematic background image: right side of the hero, behind Shahzaib's portrait */
     .new-hero {
       isolation: isolate;
     }
@@ -35,17 +35,25 @@
     .new-hero::before {
       content: "";
       position: absolute;
-      inset: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 38%;
       background-image: url("assets/hero-background.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       opacity: 0.30;
-      z-index: -1;
+      z-index: 0;
       pointer-events: none;
+      /* Fade the image gently into the black text area */
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 24%);
+      mask-image: linear-gradient(to right, transparent 0%, #000 24%);
     }
 
     .new-hero-container {
+      position: relative;
+      z-index: 1;
       width: 100%;
       max-width: 1450px;
       margin: auto;
@@ -279,6 +287,13 @@
 
     @media (max-width: 900px) {
       .new-hero { padding: 70px 25px; }
+      .new-hero::before {
+        left: 0;
+        top: 48%;
+        bottom: 0;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%);
+        mask-image: linear-gradient(to bottom, transparent 0%, #000 22%);
+      }
       .new-hero-container { grid-template-columns: 1fr; gap: 70px; }
       .hero-left { text-align: center; }
       .hero-name { letter-spacing: -3px; }
